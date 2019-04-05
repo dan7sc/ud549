@@ -1,6 +1,11 @@
 describe('Address Book', function() {
-    var addressBook = new AddressBook(),
+    var addressBook,
+        thisContact;
+
+    beforeEach(function() {
+        addressBook = new AddressBook(),
         thisContact = new Contact();
+    });
 
     it('should be able to add a contact', function() {
         addressBook.addContact(thisContact);
