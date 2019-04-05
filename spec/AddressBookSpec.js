@@ -21,3 +21,12 @@ describe('Address Book', function() {
     });
 
 });
+
+describe('Async Address Book', function() {
+    var addressBook = new AddressBook();
+
+    it('should grab initial contacts', function() {
+        expect(addressBook.initialComplete).toBe(true);
+    });
+});
+
