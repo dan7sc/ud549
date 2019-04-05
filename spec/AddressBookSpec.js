@@ -25,8 +25,15 @@ describe('Address Book', function() {
 describe('Async Address Book', function() {
     var addressBook = new AddressBook();
 
-    it('should grab initial contacts', function() {
+    beforeEach(function(done) {
+        addressBook.getInitialContacts(function() {
+            done();
+        });
+    });
+
+    it('should grab initial contacts', function(done) {
         expect(addressBook.initialComplete).toBe(true);
+        done();
     });
 });
 
